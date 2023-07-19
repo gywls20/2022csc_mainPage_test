@@ -9,14 +9,31 @@ body {
     padding: 35px 0 0 0;
     text-align: center;
 }
+/* 배경화면 */
+.background{
+    height: 100vh;
+    background-image: url("img/smartTV.svg"), url("img/background.jpg") ;
+    background-repeat : no-repeat;
+    background-size : 350px, cover ;
+    background-position: 780px 420px, 0 0;
+}
 /* 로고 이미지 */
 #logoImg{
     width: 335px;
 }
+/* 인트로버튼 */
+#intro_btn{
+    position: absolute;
+    width: 130px;
+    margin-top: 410px;
+    margin-left: 890px;
+    z-index: 2;
+}
+
 /* 상단 네비게이션 */
 .topnav {
     overflow: hidden;
-    
+
 }
 .topnav a {
     display: block;
@@ -59,11 +76,7 @@ body {
     width: 50%;
 } */
 /* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
     .column.side, .column.middle {
@@ -72,7 +85,6 @@ body {
 }
 /* Style the footer */
 .footer {
-    background-color: #f1f1f1;
-    padding: 10px;
+    background-color: black;
     text-align: center;
 }
