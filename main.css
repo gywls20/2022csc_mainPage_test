@@ -1,41 +1,56 @@
-* {
-    box-sizing: border-box;
-}
+
 body {
   margin: 0;
 }
-/* Style the header */
+/* header */
 .header {
     padding: 35px 0 0 0;
     text-align: center;
-}
-/* 배경화면 */
-.background{
-    height: 100vh;
-    background-image: url("img/background.jpg") ;
-    background-repeat : no-repeat;
-    background-size : cover ;
-    background-position:0 0;
 }
 /* 로고 이미지 */
 #logoImg{
     width: 335px;
 }
-/* 인트로버튼 */
-#intro_btn{
-    position: absolute;
-    width: 130px;
-    margin-top: 410px;
-    margin-left: 890px;
+/*배경화면*/
+.background { 
+    height: 100vh;
+    background-image: url("img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    position: relative; /* 부모 요소에 대해 상대적으로 위치 설정 */
+  }
+  /*가운데 하얀 네모*/
+  #smartTV{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px; /* Smart TV 이미지의 가로 크기 (원하는 크기로 변경) */
+    position: absolute; /* Smart TV 이미지를 절대적으로 위치시킴 */
+    top: 57%; /* 부모 요소의 50% 위에 배치 */
+    left: 50%; /* 부모 요소의 50% 왼쪽에 배치 */
+    transform: translate(-50%, -50%); /* 가운데 정렬을 위해 -50%만큼 이동 */
+    z-index: 1;
+  }
+  /*클릭버튼*/
+  #intro_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px; 
+    position: absolute; 
+    top: 67%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
     z-index: 2;
+  }
+/*배경 화면2*/
+  #main-subImg{
+    position: absolute; 
+    top: 60%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-#smartTV{
-    position: absolute;
-    width: 350px;
-    margin: auto;
-    display: block;
-}
-
 /* 상단 네비게이션 */
 .topnav {
     overflow: hidden;
@@ -58,38 +73,12 @@ body {
     list-style: none;
 }
 
-/* Change color on hover */
+/* topnav hover */
 .topnav a:hover {
     color: yellow;
 }
 
-#main-subImg{
-    margin: auto;
-    display: block;
-}
-
-/* Create three unequal columns that floats next to each other */
-/* .column {
-    float: left;
-    padding: 10px;
-} */
-/* Left and right column */
-/* .column.side {
-    width: 25%;
-} */
-/* Middle column */
-/* .column.middle {
-    width: 50%;
-} */
-/* Clear floats after the columns */
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-    .column.side, .column.middle {
-        width: 100%;
-    }
-}
-/* Style the footer */
+/* footer */
 .footer {
     background-color: black;
     text-align: center;
