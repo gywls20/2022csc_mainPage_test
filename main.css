@@ -12,10 +12,10 @@ body {
 /* 배경화면 */
 .background{
     height: 100vh;
-    background-image: url("img/smartTV.svg"), url("img/background.jpg") ;
+    background-image: url("img/background.jpg") ;
     background-repeat : no-repeat;
-    background-size : 350px, cover ;
-    background-position: 780px 420px, 0 0;
+    background-size : cover ;
+    background-position:0 0;
 }
 /* 로고 이미지 */
 #logoImg{
@@ -28,6 +28,12 @@ body {
     margin-top: 410px;
     margin-left: 890px;
     z-index: 2;
+}
+#smartTV{
+    position: absolute;
+    width: 350px;
+    margin: auto;
+    display: block;
 }
 
 /* 상단 네비게이션 */
